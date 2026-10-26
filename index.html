@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waves</title>
+  <link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/flaming-sword-minecraft-404d04d4-128.css">
+  <style>
+    .custom-cursor {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 57.6px;
+      height: 57.6px;
+      pointer-events: none;
+      user-select: none;
+      visibility: hidden;
+      will-change: transform;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      html {
+        animation: none !important;
+        cursor: none !important;
+      }
+
+      body,
+      body * {
+        cursor: none !important;
+      }
+
+      .custom-cursor {
+        display: block;
+      }
+
+      .custom-cursor.is-visible {
+        visibility: visible;
+      }
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: #fff;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      background-image: url("./End%20Product%20Page%20%2B%20Banner%202026%20lll.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .background-hotspots {
+      position: fixed;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      width: min(100vw, calc(100vh * 901 / 963));
+      height: min(100vh, calc(100vw * 963 / 901));
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .logo-layer {
+      position: fixed;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      width: min(100vw, calc(100vh * 901 / 963));
+      height: min(100vh, calc(100vw * 963 / 901));
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .logo-animation {
+      position: absolute;
+      top: 34%;
+      left: 32%;
+      width: 33.312615336%;
+      height: auto;
+    }
+
+    .catalog-link,
+    .meshes-link,
+    .homepage-link,
+    .copyright-link {
+      position: absolute;
+      top: 0.5%;
+      height: 3.5%;
+      pointer-events: auto;
+    }
+
+    .catalog-link {
+      left: 76%;
+      width: 6%;
+    }
+
+    .meshes-link {
+      left: 82.5%;
+      width: 6%;
+    }
+
+    .homepage-link {
+      left: 89.5%;
+      width: 9%;
+    }
+
+    .copyright-link {
+      top: 6%;
+      left: 40%;
+      width: 20%;
+      height: 7%;
+    }
+
+    .catalog-link:focus-visible,
+    .meshes-link:focus-visible,
+    .homepage-link:focus-visible,
+    .copyright-link:focus-visible {
+      outline: 2px solid #171717;
+      outline-offset: 2px;
+    }
+
+    .money-sign {
+      position: fixed;
+      z-index: 0;
+      left: 0;
+      width: clamp(32px, 3.2vw, 48px);
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+      filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 3px rgb(0 0 0 / 40%));
+      animation:
+        money-travel var(--travel-time) linear var(--travel-delay) infinite,
+        money-flicker var(--flicker-time) steps(1, end) var(--flicker-delay) infinite;
+    }
+
+    .money-sign:nth-child(1) {
+      top: 12%;
+      --travel-time: 15s;
+      --travel-delay: -9s;
+      --flicker-time: 0.8s;
+      --flicker-delay: -0.3s;
+    }
+
+    .money-sign:nth-child(2) {
+      top: 27%;
+      --travel-time: 19s;
+      --travel-delay: -15s;
+      --flicker-time: 0.65s;
+      --flicker-delay: -0.5s;
+    }
+
+    .money-sign:nth-child(3) {
+      top: 43%;
+      --travel-time: 17s;
+      --travel-delay: -5s;
+      --flicker-time: 0.95s;
+      --flicker-delay: -0.7s;
+    }
+
+    .money-sign:nth-child(4) {
+      top: 59%;
+      --travel-time: 21s;
+      --travel-delay: -17s;
+      --flicker-time: 0.7s;
+      --flicker-delay: -0.2s;
+    }
+
+    .money-sign:nth-child(5) {
+      top: 74%;
+      --travel-time: 16s;
+      --travel-delay: -11s;
+      --flicker-time: 1.1s;
+      --flicker-delay: -0.8s;
+    }
+
+    .money-sign:nth-child(6) {
+      top: 88%;
+      --travel-time: 20s;
+      --travel-delay: -3s;
+      --flicker-time: 0.75s;
+      --flicker-delay: -0.45s;
+    }
+
+    @keyframes money-travel {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(calc(100vw + 100%));
+      }
+    }
+
+    @keyframes money-flicker {
+      0%, 100% {
+        opacity: 0.65;
+        filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 3px rgb(0 0 0 / 40%));
+      }
+
+      35%, 72% {
+        opacity: 0.18;
+        filter: drop-shadow(0 0 1px rgb(0 0 0 / 45%));
+      }
+
+      50% {
+        opacity: 0.4;
+        filter: drop-shadow(0 0 2px rgb(0 0 0 / 55%));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .money-sign {
+        animation: none;
+      }
+    }
+
+    .panel-wrap {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      align-items: end;
+      justify-items: center;
+      padding: 24px 24px 80px;
+      z-index: 1;
+    }
+
+    .panel-frame {
+      position: relative;
+      width: min(25vw, 270px);
+      height: min(34vh, 360px);
+      min-width: 190px;
+      min-height: 220px;
+      transform: scale(0.7);
+      transform-origin: center bottom;
+    }
+
+    .scroll-panel {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      border: 1px solid rgb(255 255 255 / 85%);
+      border-radius: 2px;
+      background: #000;
+      box-shadow:
+        0 0 5px rgb(0 0 0 / 95%),
+        0 0 14px rgb(0 0 0 / 55%),
+        inset 0 0 14px rgb(0 0 0 / 28%);
+      scrollbar-color: #111 rgb(0 0 0 / 12%);
+      scrollbar-width: thin;
+    }
+
+    .scroll-panel::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .scroll-panel::-webkit-scrollbar-track {
+      background: rgb(255 255 255 / 12%);
+    }
+
+    .scroll-panel::-webkit-scrollbar-thumb {
+      border: 2px solid transparent;
+      border-radius: 8px;
+      background: #111;
+      background-clip: padding-box;
+      box-shadow: 0 0 8px rgb(0 0 0 / 90%);
+    }
+
+    .scroll-content {
+      display: flex;
+      min-height: 150%;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 14px;
+      box-sizing: border-box;
+    }
+
+    .gallery-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      .panel-frame {
+        width: min(55vw, 250px);
+        height: 36vh;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <img
+    class="custom-cursor"
+    src="https://cdn.cursors-4u.net/previews/flaming-sword-minecraft-404d04d4-anim-96.webp"
+    alt=""
+    aria-hidden="true"
+  >
+  <div class="background-hotspots">
+    <a
+      class="copyright-link"
+      href="https://www.dmca.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="DMCA"
+      title="DMCA"
+    ></a>
+    <a
+      class="homepage-link"
+      href="https://www.imvu.com/catalog/web_mypage.php?user=180292978"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Homepage"
+      title="Homepage"
+    ></a>
+    <a
+      class="meshes-link"
+      href="https://imgur.com/user/KenFiles/posts"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Meshes"
+      title="Meshes"
+    ></a>
+    <a
+      class="catalog-link"
+      href="https://www.imvu.com/shop/web_search.php?manufacturers_id=180292978"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Catalog"
+      title="Catalog"
+    ></a>
+  </div>
+  <div class="logo-layer" aria-hidden="true">
+    <img class="logo-animation" src="./End-logo-ll.gif" alt="">
+  </div>
+  <div class="money-layer" aria-hidden="true">
+    <img class="money-sign" src="./cross.png" alt="">
+    <img class="money-sign" src="./cross.png" alt="">
+    <img class="money-sign" src="./cross.png" alt="">
+    <img class="money-sign" src="./cross.png" alt="">
+    <img class="money-sign" src="./cross.png" alt="">
+    <img class="money-sign" src="./cross.png" alt="">
+  </div>
+  <main class="panel-wrap">
+    <div class="panel-frame">
+      <section class="scroll-panel" aria-label="Scrollable content" tabindex="0">
+        <div class="scroll-content">
+          <img class="gallery-image" src="./gallery/gR9LaYd.png" alt="Gallery image 1">
+          <img class="gallery-image" src="./gallery/HylsNcz.png" alt="Gallery image 2">
+        </div>
+      </section>
+    </div>
+  </main>
+  <script>
+    const customCursor = document.querySelector(".custom-cursor");
+    let cursorFrame = 0;
+    let pointerX = 0;
+    let pointerY = 0;
+
+    document.addEventListener("pointermove", (event) => {
+      if (event.pointerType !== "mouse" && event.pointerType !== "pen") {
+        return;
+      }
+
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+      customCursor.classList.add("is-visible");
+
+      if (!cursorFrame) {
+        cursorFrame = requestAnimationFrame(() => {
+          customCursor.style.transform =
+            `translate3d(${pointerX - 2.4}px, ${pointerY - 28.2}px, 0)`;
+          cursorFrame = 0;
+        });
+      }
+    });
+
+    document.documentElement.addEventListener("pointerleave", () => {
+      customCursor.classList.remove("is-visible");
+    });
+  </script>
+</body>
+</html>
